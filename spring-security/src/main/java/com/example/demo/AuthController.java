@@ -1,4 +1,4 @@
-package net.guides.springboot2.springboot2jpacrudexample.controller;
+package com.example.demo;
 
 
 import java.util.HashSet;
@@ -24,17 +24,17 @@ import org.springframework.web.bind.annotation.RestController;
 /*import com.bezkoder.springjwt.security.jwt.JwtUtils;
 import com.bezkoder.springjwt.security.services.UserDetailsImpl;*/
 
-import net.guides.springboot2.springboot2jpacrudexample.model.ERole;
-import net.guides.springboot2.springboot2jpacrudexample.model.Role;
-import net.guides.springboot2.springboot2jpacrudexample.model.User;
-import net.guides.springboot2.springboot2jpacrudexample.payload.request.LoginRequest;
-import net.guides.springboot2.springboot2jpacrudexample.payload.request.SignupRequest;
-import net.guides.springboot2.springboot2jpacrudexample.payload.response.JwtResponse;
-import net.guides.springboot2.springboot2jpacrudexample.payload.response.MessageResponse;
-import net.guides.springboot2.springboot2jpacrudexample.repository.RoleRepository;
-import net.guides.springboot2.springboot2jpacrudexample.repository.UserRepository;
-import net.guides.springboot2.springboot2jpacrudexample.security.jwt.JwtUtils;
-import net.guides.springboot2.springboot2jpacrudexample.security.services.UserDetailsImpl;
+import com.example.demo.
+import com.example.model.model.Role;
+import com.example.model.model.User;
+import com.example.model.payload.request.LoginRequest;
+import com.example.model.payload.request.SignupRequest;
+import com.example.model.payload.response.JwtResponse;
+import com.example.model.payload.response.MessageResponse;
+import com.example.model.repository.RoleRepository;
+import com.example.model.repository.UserRepository;
+import com.example.model.security.jwt.JwtUtils;
+import com.example.model.security.services.UserDetailsImpl;
 
 
 @CrossOrigin(origins = "*", maxAge = 3600)
