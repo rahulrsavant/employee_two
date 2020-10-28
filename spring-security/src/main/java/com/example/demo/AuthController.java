@@ -24,17 +24,17 @@ import org.springframework.web.bind.annotation.RestController;
 /*import com.bezkoder.springjwt.security.jwt.JwtUtils;
 import com.bezkoder.springjwt.security.services.UserDetailsImpl;*/
 
-import com.example.demo.
-import com.example.model.model.Role;
-import com.example.model.model.User;
-import com.example.model.payload.request.LoginRequest;
-import com.example.model.payload.request.SignupRequest;
-import com.example.model.payload.response.JwtResponse;
-import com.example.model.payload.response.MessageResponse;
-import com.example.model.repository.RoleRepository;
-import com.example.model.repository.UserRepository;
-import com.example.model.security.jwt.JwtUtils;
-import com.example.model.security.services.UserDetailsImpl;
+import com.example.demo.model.ERole;
+import com.example.demo.model.Role;
+import com.example.demo.model.User;
+import com.example.demo.payload.request.LoginRequest;
+import com.example.demo.payload.request.SignupRequest;
+import com.example.demo.payload.response.JwtResponse;
+import com.example.demo.payload.response.MessageResponse;
+import com.example.demo.repository.RoleRepository;
+import com.example.demo.repository.UserRepository;
+import com.example.demo.security.jwt.JwtUtils;
+import com.example.demo.security.service.UserDetailsImpl;
 
 
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -56,6 +56,8 @@ public class AuthController {
 
 	@Autowired
 	JwtUtils jwtUtils;
+	
+
 
 	@PostMapping("/signin")
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {

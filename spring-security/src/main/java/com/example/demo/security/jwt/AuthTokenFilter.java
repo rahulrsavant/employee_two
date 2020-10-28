@@ -1,4 +1,4 @@
-package com.example.security.jwt;
+package com.example.demo.security.jwt;
 
 
 
@@ -19,7 +19,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.example.security.service.UserDetailsServiceImpl;
+import com.example.demo.security.service.UserDetailsServiceImpl;
 
 //import com.bezkoder.springjwt.security.services.UserDetailsServiceImpl;
 
