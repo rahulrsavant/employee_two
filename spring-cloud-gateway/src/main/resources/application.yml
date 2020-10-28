@@ -31,15 +31,6 @@ spring:
               args:
                 name: employee-service
                 fallbackuri: forward:/employeeFallback
-        - id: frond-end-service
-          uri: lb://FRONT-END-SERVICE
-          predicates:
-            - Path=/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: front-end-service
-                fallbackuri: forward:/frontendFallback
           
                 
 

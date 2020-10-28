@@ -8,6 +8,10 @@ spring:
       enabled: true
   application:
     name: employee-service
+  cloud: 
+     config: 
+      discovery: 
+        enabled: true
 logging:
   file: C:/Users/vidula/Desktop/oms.log
 
@@ -15,3 +19,4 @@ bezkoder:
   app:
     jwtSecret: bezKoderSecretKey
     jwtExpirationMs: 86400000
+    
