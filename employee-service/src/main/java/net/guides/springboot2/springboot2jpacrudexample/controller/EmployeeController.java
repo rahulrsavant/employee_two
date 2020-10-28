@@ -46,6 +46,12 @@ public class EmployeeController {
 		return employeedto;
 	}
 	
+	@GetMapping("/employeetest")
+	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	public String employeeTest() {	
+		return "test";
+	}
+	
 
 	@GetMapping("/employees/{id}")
 	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
