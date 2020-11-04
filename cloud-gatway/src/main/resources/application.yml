@@ -4,24 +4,6 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: salary-service
-          uri: lb://SALARY-SERVICE
-          predicates:
-            - Path=/api/v1/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: salary-service
-                fallbackuri: forward:/salaryFallBack
-        - id: leave-service
-          uri: lb://LEAVE-SERVICE
-          predicates:
-            - Path=/api/v1/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: leave-service
-                fallbackuri: forward:/leaveFallback
         - id: employee-service
           uri: lb://EMPLOYEE-SERVICE
           predicates:
