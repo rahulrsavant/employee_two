@@ -1,5 +1,4 @@
 package net.guides.springboot2.springboot2jpacrudexample.controller;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,6 +43,12 @@ public class EmployeeController {
 	public List<EmployeeDTO> getAllEmployees() {	
 		List<EmployeeDTO> employeedto=employeeService.getAllEmployees();
 		return employeedto;
+	}
+	
+	@GetMapping("/employeetest")
+	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	public String employeeTest() {	
+		return "test";
 	}
 	
 

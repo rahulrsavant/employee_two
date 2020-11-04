@@ -8,7 +8,7 @@ info:
         name: Spring Boot - RestTemplate CRUD Rest Client Example
         version: 1.0.0
 server:
-    port: 9197
+    port: 9190
 spring:
     datasource:
         password: Vidula@9975
@@ -19,11 +19,13 @@ spring:
             ddl-auto: update
         properties:
             hibernate:
-                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+                dialect: org.hibernate.dialect.MySQL8Dialect
+                driverClassName: com.mysql.cj.jdbc.Driver
                 jdbc:
                     lob:
                         non_contextual_creation: true
     application:
-      name: salary-service
+      name: spring-security
     logging:
       file: /home
+  

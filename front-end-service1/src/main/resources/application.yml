@@ -1,11 +1,8 @@
 server:
-  port: 9197
+  port: 9199
 spring:
   zipkin:
     base-url: http://localhost:9411/
-  h2:
-    console:
-      enabled: true
   application:
     name: front-end-service
 logging:
