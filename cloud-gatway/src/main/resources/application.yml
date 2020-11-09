@@ -13,6 +13,15 @@ spring:
               args:
                 name: employee-service
                 fallbackuri: forward:/employeeFallback
+        - id: ecommerce-service
+          uri: lb://ECOMMERCE-SERVICE
+          predicates:
+            - Path=/books/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: ecommerce-service
+                fallbackuri: forward:/ecommerceFallback
   eureka:
     client:
       register-with-eureka: true
