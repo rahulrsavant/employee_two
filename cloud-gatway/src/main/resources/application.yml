@@ -22,6 +22,15 @@ spring:
               args:
                 name: ecommerce-service
                 fallbackuri: forward:/ecommerceFallback
+        - id: spring-security
+          uri: lb://SPRING-SECURITY
+          predicates:
+            - Path=/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: spring-security
+                fallbackuri: forward:/springsecurityFallback
   eureka:
     client:
       register-with-eureka: true

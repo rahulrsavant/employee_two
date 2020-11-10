@@ -23,4 +23,9 @@ public class FallbackController {
     public Mono<String> frontEndServiceFallBack() {
         return Mono.just("Front-end Service is taking too long to respond or is down. Please try again later");
     }
+    
+    @RequestMapping("/springsecurityFallback")
+    public Mono<String> springsecurityFallback() {
+        return Mono.just("Spring-security Service is taking too long to respond or is down. Please try again later");
+    }
 }
