@@ -1,0 +1,31 @@
+# ===================== Sign  up ================================
+
+http://localhost:8080/springboot-crud-rest/api/auth/signup
+Content-Type : application/json
+Origin : http://localhost:4200
+
+{
+"username":"testme",
+"email":"testme@gmail.com",
+"password":"123456",
+"role":["admin"]
+}
+
+
+#============== sign in ===============================================
+http://localhost:8080/springboot-crud-rest/api/auth/signin
+
+{
+	"username":"admin",
+	"password":"123456"
+}
+
+
+get the Bearer token and put it into modeheader
+
+#=================================================================
+
+
+
+http://localhost:8080/springboot-crud-rest/employees  <------Home page
+
